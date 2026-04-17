@@ -18,7 +18,7 @@ It is also addictive and entertaining as it keeps you on your toes.
 2. Shaylee O'Grady
 3. Misha Awan
 ## Sketch of the Game
-
+Mine - Proposal Draft.png
 
 ## How the Game works
 Upon clicking on play, the user is presented with a 3x3 grid

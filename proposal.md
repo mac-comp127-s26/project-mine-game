@@ -21,6 +21,13 @@ It is also addictive and entertaining as it keeps you on your toes.
 
 
 ## How the Game works
+Upon clicking on play, the user is presented with a 3x3 grid
+The grids are concealed
+A mine is randomly place on one of the grid
+The user tries to uncover the grids without clicking on the one with the mine
+If the mine is clicked, the game displays " You died" 
+if the mine is not clicked in five tries, the user is declared the winner.
+Click on play agian if you would like to play again.
 
 
 ## How to Play

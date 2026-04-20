@@ -23,13 +23,13 @@ It is also addictive and entertaining as it keeps you on your toes.
 ![](Mine-Proposal-Draft.png)
 
 ## How the Game works
-Upon clicking on play, the user is presented with a 3x3 grid
-The grids are concealed
-A mine is randomly place on one of the grid
-The user tries to uncover the grids without clicking on the one with the mine
-If the mine is clicked, the game displays " You died" 
-if the mine is not clicked in five tries, the user is declared the winner.
-Click on play again if you would like to play again.
+1. Upon clicking on play, the user is presented with a 3x3 grid
+2. The grids are concealed
+3. A mine is randomly place on one of the grid
+4. The user tries to uncover the grids without clicking on the one with the mine
+5. If the mine is clicked, the game displays " You died" 
+6. if the mine is not clicked in five tries, the user is declared the winner.
+7. Click on play again if you would like to play again.
 
 ## How to Play
 1. Click Play to start the game. A hidden 3×3 grid will appear.

@@ -28,7 +28,7 @@ A mine is randomly place on one of the grid
 The user tries to uncover the grids without clicking on the one with the mine
 If the mine is clicked, the game displays " You died" 
 if the mine is not clicked in five tries, the user is declared the winner.
-Click on play agian if you would like to play again.
+Click on play again if you would like to play again.
 
 ## How to Play
 1. Click Play to start the game. A hidden 3×3 grid will appear.

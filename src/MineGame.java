@@ -10,8 +10,19 @@ public class MineGame {
     public MineGame() {
         this.canvas = new CanvasWindow("Mine Game", CANVAS_WIDTH, CANVAS_HEIGHT);
 
-        line = new Line(canvas);
+        line = new Line(150,0,20,400);
         line.addToCanvas(canvas);
+
+        line = new Line(0,300,20,400);
+        line.addToCanvas(canvas);
+
+        line = new Line(300,0,20,400);
+        line.addToCanvas(canvas);
+
+        line = new Line(0,0,20,400);
+        line.addToCanvas(canvas);
+
+
         
     }
 

@@ -12,9 +12,6 @@ public Line(int x, int y, int width, int height) { // sets intial rectangle with
         line.setFillColor(Color.BLACK);
 }
 
-public Line(CanvasWindow canvas) {
-    //TODO Auto-generated constructor stub
-}
 
 public void addToCanvas(CanvasWindow canvas){
     canvas.add(line);

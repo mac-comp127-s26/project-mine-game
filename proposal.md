@@ -30,10 +30,13 @@ If the mine is clicked, the game displays " You died"
 if the mine is not clicked in five tries, the user is declared the winner.
 Click on play agian if you would like to play again.
 
-
 ## How to Play
-The game depends on the player's strategy. You would need to click on the grids one by one, while trying to avoid the grid with the mine. 
-
+Click Play to start the game. A hidden 3×3 grid will appear.
+Behind one random tile is a hidden mine .
+Click on tiles one at a time to reveal them.
+If you click the tile with the mine → 💥 Game Over (“You died”).
+If you reveal 5 safe tiles without hitting the mine → 🎉 You win!
+Once the game ends, click Play Again to restart with a new random mine position.
 
 
 

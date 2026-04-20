@@ -32,6 +32,7 @@ Click on play agian if you would like to play again.
 
 
 ## How to Play
+The game depends on the player's strategy. You would need to click on the grids one by one, while trying to avoid the grid with the mine. 
 
 
 

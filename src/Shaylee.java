@@ -1,3 +1,3 @@
-public class shaylee {
+public class Shaylee {
 
 }

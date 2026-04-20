@@ -35,8 +35,8 @@ It is also addictive and entertaining as it keeps you on your toes.
 1. Click Play to start the game. A hidden 3×3 grid will appear.
 2. Behind one random grid is a hidden mine .
 3. Click on gridss one at a time to reveal them.
-4. If you click the grid with the mine → 💥 Game Over (“You died”).
-5. If you reveal 5 safe grids without hitting the mine → 🎉 You win!
+4. If you click the grid with the mine →  Game Over (“You died”).
+5. If you reveal 5 safe grids without hitting the mine →  You win!
 6. Once the game ends, click Play Again to restart with a new random mine position.
 
 

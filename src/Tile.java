@@ -3,11 +3,11 @@ import edu.macalester.graphics.Rectangle;
 import java.awt.Color;
 
 
-public class Tiles {
+public class Tile {
 
-private Rectangle tile;
+private Rectangle tile ; //extend rectangle .. 
 
-public Tiles(int x, int y, int width, int height) { // sets intial Tile with fill color, X,Y Corsds
+public Tile(int x, int y, int width, int height) { // sets intial Tile with fill color, X,Y Corsds
     tile = new Rectangle(x, y, width, height); // new square
         tile.setFillColor(Color.pink);
 }

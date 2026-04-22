@@ -10,6 +10,8 @@
 Create a 3×3 grid where a mine is randomly assigned to one of the squares, and allow the user to click or move through the grid to make selections. The goal of the game is simple don’t blow up. What makes the game interesting is its simplicity; both programmers and non-programmers can enjoy it thanks to abstraction, while its unpredictable nature keeps it engaging, addictive, and entertaining.
 
 ## Sketch of the Game
+
+The three boxes at the top are our three classes! (Class Diagram)
 ![](Mine-Proposal-Draft.png)
 
 ## How the Game works

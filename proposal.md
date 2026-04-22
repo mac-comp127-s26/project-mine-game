@@ -14,6 +14,9 @@ Create a 3×3 grid where a mine is randomly assigned to one of the squares, and 
 The three boxes at the top are our three classes! (Class Diagram)
 ![](Mine-Proposal-Draft.png)
 
+Example progress of the game if the user clicked correctly 3 times and then on the fourth hit the mine.
+![](ExgameStages.png)
+
 ## How the Game works
 1. Upon clicking on play, the user is presented with a 3x3 grid
 2. The grids are concealed

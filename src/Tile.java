@@ -16,5 +16,14 @@ public Tile(int x, int y, int width, int height) { // sets intial Tile with fill
 public void addToCanvas(CanvasWindow canvas){
     canvas.add(tile);
 
+}
+
+public void reveal() {
+    tile.setFillColor(Color.GREEN);
+}
+
+
+public boolean contains(double x, double y){
+        return tile.getBounds().contains(x,y);
     }
 }

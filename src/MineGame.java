@@ -11,11 +11,12 @@ public class MineGame {
     private final int CANVAS_WIDTH = 400;
     private final int CANVAS_HEIGHT = 400;
     private Line line;
+    private Rectangle tile;
     private int tileSize = 90;// actual tile size
     private int tile_space_size = 132; // adjusts how far spaced between based on the number it gets used in spacing
     private int spacing = (tile_space_size - tileSize) / 2;// spacing in between squares
     private List<Tile> tilesArrayList = new ArrayList<>();
-
+    
 
     public MineGame() {
         this.canvas = new CanvasWindow("Mine Game", CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -44,15 +45,25 @@ public class MineGame {
             }
         }
 
-
+        canvas.onClick(event -> {
+            System.out.println("clicked"); // just keeping this for now that we can keep checking it
+            double x = event.getPosition().getX();
+            double y = event.getPosition().getY();
+            for (Tile t : tilesArrayList) {
+                if (t.contains(x, y)) {
+                    t.reveal();
+                    break;
+                }
+            }
+        });
     }
+
 
     public List<Tile> getTilesArrayList() {
         return tilesArrayList;
     }
 
     public void runGame() {
-
     }
 
 

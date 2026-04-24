@@ -4,12 +4,21 @@ import java.awt.Color;
 
 
 public class Tile {
+    private double  x;
+    private double y;
+    private double width;
+    private double height;
+
 
 private Rectangle tile ; //extend rectangle .. 
 
-public Tile(int x, int y, int width, int height) { // sets intial Tile with fill color, X,Y Corsds
+public Tile(double x, double  y, double width, double height) { // sets intial Tile with fill color, X,Y Corsds
+   this.x=x;
+   this.y=y;
+   this.width=width;
+   this.height=height;
     tile = new Rectangle(x, y, width, height); // new square
-        tile.setFillColor(Color.pink);
+    tile.setFillColor(Color.PINK);
 }
 
 
@@ -24,6 +33,14 @@ public void reveal() {
 
 
 public boolean contains(double x, double y){
-        return tile.getBounds().contains(x,y);
+       // return tile.getBounds().contains(x,y);
+
+       //same logic here..check if it the click is inside the tiles..
+       //did not work
+       // tiles turn green though yay!
+        return x>=this.x &&
+        x<this.x+this.width &&
+        y >=this.y &&
+        y<this.y+this.height;
     }
 }

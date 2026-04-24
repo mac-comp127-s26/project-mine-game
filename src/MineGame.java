@@ -16,6 +16,7 @@ public class MineGame {
     private int tile_space_size = 132; // adjusts how far spaced between based on the number it gets used in spacing
     private int spacing = (tile_space_size - tileSize) / 2;// spacing in between squares
     private List<Tile> tilesArrayList = new ArrayList<>();
+    private boolean hit;
     
 
     public MineGame() {
@@ -52,8 +53,13 @@ public class MineGame {
             for (Tile t : tilesArrayList) {
                 if (t.contains(x, y)) {
                     t.reveal();
-                    break;
+                    hit= true; //created a new boolean variable up top.
+                    break;   
                 }
+            }// if the click is outside..
+            //the problem is that it only works when there is no green tile
+            if (!hit){
+                System.out.println("You Clicked Outside the tiles");
             }
         });
     }

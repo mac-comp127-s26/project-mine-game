@@ -11,7 +11,6 @@ public class MineGame {
     private final int CANVAS_WIDTH = 400;
     private final int CANVAS_HEIGHT = 400;
     private Line line;
-    private Rectangle tile;
     private int tileSize = 90;// actual tile size
     private int tile_space_size = 132; // adjusts how far spaced between based on the number it gets used in spacing
     private int spacing = (tile_space_size - tileSize) / 2;// spacing in between squares

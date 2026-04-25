@@ -20,7 +20,7 @@ public class MineGame {
     
 
     public MineGame() {
-        this.canvas = new CanvasWindow("Mine Game", CANVAS_WIDTH, CANVAS_HEIGHT);
+        this.canvas = new CanvasWindow("Mine Game!", CANVAS_WIDTH, CANVAS_HEIGHT);
         canvas.setBackground(Color.BLACK); // sets background color
 
         line = new Line(125, 0, 20, 400); // first vertical line
@@ -47,7 +47,7 @@ public class MineGame {
         }
 
         canvas.onClick(event -> {
-            System.out.println("clicked"); // just keeping this for now that we can keep checking it
+            //System.out.println("clicked"); // just keeping this for now that we can keep checking it
             double x = event.getPosition().getX();
             double y = event.getPosition().getY();
             for (Tile t : tilesArrayList) {

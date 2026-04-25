@@ -42,5 +42,6 @@ public boolean contains(double x, double y){
         x<this.x+this.width &&
         y >=this.y &&
         y<this.y+this.height;
+
     }
 }

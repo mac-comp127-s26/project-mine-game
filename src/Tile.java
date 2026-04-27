@@ -29,6 +29,7 @@ public void addToCanvas(CanvasWindow canvas){
 
 public void reveal() {
     tile.setFillColor(Color.GREEN);
+    
 }
 
 

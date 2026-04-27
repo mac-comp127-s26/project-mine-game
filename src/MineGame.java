@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
-
+import java.util.Random;
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Rectangle;
 import java.util.List;
@@ -16,6 +16,8 @@ public class MineGame {
     private int spacing = (tile_space_size - tileSize) / 2;// spacing in between squares
     private List<Tile> tilesArrayList = new ArrayList<>();
     private boolean hit;
+    private Random rand = new Random();
+
     
 
     public MineGame() {
@@ -41,9 +43,9 @@ public class MineGame {
                 Tile tile = new Tile(x, y, tileSize, tileSize);
                 tilesArrayList.add(tile);
                 tile.addToCanvas(canvas);
-                
             }
         }
+
 
         canvas.onClick(event -> {
             //System.out.println("clicked"); // just keeping this for now that we can keep checking it
@@ -75,7 +77,11 @@ public class MineGame {
     public static void main(String[] args) {
 
         MineGame mg = new MineGame();
-        System.out.println(mg.getTilesArrayList());
+        // System.out.println(mg.getTilesArrayList());
+        System.out.println(mg.getTilesArrayList().get(0));
+        System.out.println(mg.getTilesArrayList().get(0));
+
+        // int randtile = Random.nextInt(mg.getTilesArrayList().size());
 
     }
 }

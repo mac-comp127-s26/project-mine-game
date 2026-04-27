@@ -47,6 +47,9 @@ public class MineGame {
             }
         }
 
+        int randomIndex = rand.nextInt(tilesArrayList.size());
+        tilesArrayList.get(randomIndex).setMineup(true);
+
 
         canvas.onClick(event -> {
             //System.out.println("clicked"); // just keeping this for now that we can keep checking it
@@ -65,6 +68,7 @@ public class MineGame {
             }
         });
     }
+    
 
 
     public List<Tile> getTilesArrayList() {
@@ -78,7 +82,7 @@ public class MineGame {
     public static void main(String[] args) {
 
         MineGame mg = new MineGame();
-        System.out.println(mg.getTilesArrayList());
+       
 
     }
 }

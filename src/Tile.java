@@ -8,7 +8,7 @@ public class Tile {
     private double y;
     private double width;
     private double height;
-
+    private boolean mine = false;
 
 private Rectangle tile ; //extend rectangle .. 
 
@@ -27,8 +27,22 @@ public void addToCanvas(CanvasWindow canvas){
 
 }
 
+public void setMineup (boolean mine){
+    this.mine = mine;
+}
+
+public boolean isMine(){
+    return mine;
+}
+
+
 public void reveal() {
+    if (mine) {
+        tile.setFillColor(Color.RED); 
+    }
+    else{
     tile.setFillColor(Color.GREEN);
+    }
     
 }
 
@@ -45,4 +59,6 @@ public boolean contains(double x, double y){
         y<this.y+this.height;
 
     }
+
+
 }

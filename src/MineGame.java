@@ -5,6 +5,7 @@ import java.util.Arrays;
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Rectangle;
 import java.util.List;
+import java.util.Random;
 
 public class MineGame {
     private CanvasWindow canvas;
@@ -76,6 +77,11 @@ public class MineGame {
 
         MineGame mg = new MineGame();
         System.out.println(mg.getTilesArrayList());
+        
+        Random randt = new Random();
+        int randtile  =randt.nextInt(mg.getTilesArrayList().size());
+        System.out.println(randtile);
+        
 
     }
 }

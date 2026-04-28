@@ -1,6 +1,7 @@
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Rectangle;
 import java.awt.Color;
+//import javax.swing.Timer;
 
 
 public class Tile {
@@ -38,10 +39,16 @@ public boolean isMine(){
 
 public void reveal() {
     if (mine) {
-        tile.setFillColor(Color.RED); 
+        tile.setFillColor(Color.RED);
+
+        MineGame mt = new MineGame();
+        mt.closeWindow(); // calls the method and closes the window.
+
+        //System.out.println("You stepped on the mine");
     }
     else{
     tile.setFillColor(Color.GREEN);
+    
     }
     
 }

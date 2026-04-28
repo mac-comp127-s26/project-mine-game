@@ -3,14 +3,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import edu.macalester.graphics.CanvasWindow;
-import edu.macalester.graphics.Rectangle;
+//import edu.macalester.graphics.Rectangle;
 import java.util.List;
 import java.util.Random;
 
+
 public class MineGame {
     private CanvasWindow canvas;
-    private final int CANVAS_WIDTH = 400;
-    private final int CANVAS_HEIGHT = 400;
+    private final int CANVAS_WIDTH = 500;
+    private final int CANVAS_HEIGHT = 500;
     private Line line;
     private int tileSize = 90;// actual tile size
     private int tile_space_size = 132; // adjusts how far spaced between based on the number it gets used in spacing
@@ -18,12 +19,14 @@ public class MineGame {
     private List<Tile> tilesArrayList = new ArrayList<>();
     private boolean hit;
     private Random rand = new Random();
+    
 
     
 
     public MineGame() {
         this.canvas = new CanvasWindow("Mine Game!", CANVAS_WIDTH, CANVAS_HEIGHT);
-        canvas.setBackground(Color.BLACK); // sets background color
+        canvas.setBackground(Color.black); // sets background color
+
 
         line = new Line(125, 0, 20, 400); // first vertical line
         line.addToCanvas(canvas);
@@ -68,7 +71,9 @@ public class MineGame {
             }
         });
     }
-    
+        public void closeWindow() { // closes the window
+            System.exit(0);
+    }
 
 
     public List<Tile> getTilesArrayList() {

@@ -40,11 +40,8 @@ public boolean isMine(){
 public void reveal() {
     if (mine) {
         tile.setFillColor(Color.RED);
-
-        MineGame mt = new MineGame();
-        mt.closeWindow(); // calls the method and closes the window.
-
         //System.out.println("You stepped on the mine");
+        
     }
     else{
     tile.setFillColor(Color.GREEN);

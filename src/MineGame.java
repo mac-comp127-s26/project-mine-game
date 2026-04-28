@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import edu.macalester.graphics.CanvasWindow;
+import edu.macalester.graphics.FontStyle;
+import edu.macalester.graphics.GraphicsText;
+
 //import edu.macalester.graphics.Rectangle;
 import java.util.List;
 import java.util.Random;
@@ -61,7 +64,12 @@ public class MineGame {
             for (Tile t : tilesArrayList) {
                 if (t.contains(x, y)) {
                     t.reveal();
+                    canvas.draw();
                     hit= true; //created a new boolean variable up top.
+                    if(t.isMine()){
+                        canvas.pause(3000);
+                        canvas.closeWindow();
+                    }
                     break;   
                 }
             }// if the click is outside..
@@ -71,9 +79,8 @@ public class MineGame {
             }
         });
     }
-        public void closeWindow() { // closes the window
-            System.exit(0);
-    }
+     
+
 
 
     public List<Tile> getTilesArrayList() {
@@ -87,6 +94,7 @@ public class MineGame {
     public static void main(String[] args) {
 
         MineGame mg = new MineGame();
+        
        
 
     }

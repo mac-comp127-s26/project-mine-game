@@ -5,6 +5,7 @@ import java.util.Random;
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.FontStyle;
 import edu.macalester.graphics.GraphicsText;
+import edu.macalester.graphics.Image;
 
 // import edu.macalester.graphics.Rectangle;
 import java.util.List;
@@ -67,8 +68,12 @@ public class MineGame {
                     hit = true; // created a new boolean variable up top.
                     if (t.isMine()) {
                         canvas.add(getText());
-                        canvas.pause(2000); // should we make it less time?
-                        canvas.closeWindow();
+                        //canvas.pause(2000); // should we make it less time?
+                        //canvas.closeWindow();
+                        //ADD GIF EVENT HERE on click on mine
+                        Image boom = new Image(x,y,"bomb.gif");
+                        canvas.add(boom);
+                        canvas.draw();;
                     }
                     break;
                 }

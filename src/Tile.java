@@ -2,6 +2,9 @@ import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Rectangle;
 import java.awt.Color;
 //import javax.swing.Timer;
+import edu.macalester.graphics.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 
 public class Tile {
@@ -41,7 +44,6 @@ public void reveal() {
     if (mine) {
         tile.setFillColor(Color.RED);
         //System.out.println("You stepped on the mine");
-        
     }
     else{
     tile.setFillColor(Color.GREEN);

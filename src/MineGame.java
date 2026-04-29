@@ -22,6 +22,7 @@ public class MineGame {
     private List<Tile> tilesArrayList = new ArrayList<>();
     private boolean hit;
     private Random rand = new Random();
+    private boolean redTile = false ;
 
 
     public MineGame() {
@@ -29,7 +30,85 @@ public class MineGame {
         canvas.setBackground(Color.black); // sets background color
 
 
-        line = new Line(125, 0, 20, 400); // first vertical line
+        Grid();
+
+        // line = new Line(125, 0, 20, 400); // first vertical line
+        // line.addToCanvas(canvas);
+
+        // line = new Line(0, 125, 400, 20); // first horizontal line
+        // line.addToCanvas(canvas);
+
+        // line = new Line(250, 0, 20, 400); // second vertical line
+        // line.addToCanvas(canvas);
+
+        // line = new Line(0, 250, 400, 20); // second horizontal line or bottom
+        // line.addToCanvas(canvas);
+
+        // for (int row = 0; row < 3; row++) {
+        //     for (int col = 0; col < 3; col++) {
+        //         int x = col * tile_space_size + spacing;
+        //         int y = row * tile_space_size + spacing;
+        //         Tile tile = new Tile(x, y, tileSize, tileSize);
+        //         tilesArrayList.add(tile);
+        //         tile.addToCanvas(canvas);
+        //     }
+        // }
+
+        // int randomIndex = rand.nextInt(tilesArrayList.size());
+        // tilesArrayList.get(randomIndex).setMineup(true);
+
+         
+
+        canvas.onClick(event -> {
+            System.out.println(tilesArrayList); // just keeping this for now that we can keep checking it
+            double x = event.getPosition().getX();
+            double y = event.getPosition().getY();
+            for (Tile t : tilesArrayList) {
+                if (t.contains(x, y)) {
+                    t.reveal();
+                    canvas.draw();
+                    hit = true; // created a new boolean variable up top.
+                    if (t.isMine()) {
+                        canvas.add(getText());
+                        canvas.pause(2000); // should we make it less time?
+                        reset();
+                        
+                        
+
+                    }
+                    break;
+                    
+                }
+            }// if the click is outside..
+             // the problem is that it only works when there is no green tile
+            if (!hit) {
+                System.out.println("You Clicked Outside the tiles");
+            }
+        });
+    }
+
+    public void reset(){
+        canvas.removeAll();
+        tilesArrayList.clear();
+        Grid();
+    }
+
+    public List<Tile> getTilesArrayList() {
+        return tilesArrayList;
+    }
+
+    public GraphicsText getText(){
+            GraphicsText loseText = new GraphicsText("YOU LOSE!!",40,100);
+                    loseText.setFontSize(90);
+                    loseText.setFillColor(Color.red);
+                    return loseText;
+
+        }
+
+    public void runGame() {
+    }
+public void Grid(){
+    line = new Line(125, 0, 20, 400); // first vertical line
         line.addToCanvas(canvas);
 
         line = new Line(0, 125, 400, 20); // first horizontal line
@@ -50,52 +129,9 @@ public class MineGame {
                 tile.addToCanvas(canvas);
             }
         }
-
         int randomIndex = rand.nextInt(tilesArrayList.size());
         tilesArrayList.get(randomIndex).setMineup(true);
-
-         
-
-        canvas.onClick(event -> {
-            // System.out.println("clicked"); // just keeping this for now that we can keep checking it
-            double x = event.getPosition().getX();
-            double y = event.getPosition().getY();
-            for (Tile t : tilesArrayList) {
-                if (t.contains(x, y)) {
-                    t.reveal();
-                    canvas.draw();
-                    hit = true; // created a new boolean variable up top.
-                    if (t.isMine()) {
-                        canvas.add(getText());
-                        canvas.pause(2000); // should we make it less time?
-                        canvas.closeWindow();
-                    }
-                    break;
-                }
-            }// if the click is outside..
-             // the problem is that it only works when there is no green tile
-            if (!hit) {
-                System.out.println("You Clicked Outside the tiles");
-            }
-        });
-    }
-
-
-    public List<Tile> getTilesArrayList() {
-        return tilesArrayList;
-    }
-
-    public GraphicsText getText(){
-            GraphicsText loseText = new GraphicsText("YOU LOSE!!",40,100);
-                    loseText.setFontSize(90);
-                    loseText.setFillColor(Color.red);
-                    return loseText;
-
-        }
-
-    public void runGame() {
-    }
-
+}
 
     public static void main(String[] args) {
 

@@ -5,6 +5,7 @@ import java.util.Random;
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.FontStyle;
 import edu.macalester.graphics.GraphicsText;
+import edu.macalester.graphics.Image;
 
 // import edu.macalester.graphics.Rectangle;
 import java.util.List;
@@ -71,10 +72,7 @@ public class MineGame {
                     if (t.isMine()) {
                         canvas.add(getText());
                         canvas.pause(2000); // should we make it less time?
-                        reset();
-                        
-                        
-
+                        canvas.closeWindow();
                     }
                     break;
                     

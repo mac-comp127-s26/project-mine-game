@@ -67,7 +67,7 @@ public class MineGame {
                     canvas.draw();
                     hit= true; //created a new boolean variable up top.
                     if(t.isMine()){
-                        canvas.pause(3000);
+                        canvas.pause(3000); // should we make it less time?
                         canvas.closeWindow();
                     }
                     break;   

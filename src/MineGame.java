@@ -71,10 +71,12 @@ public class MineGame {
                         //canvas.pause(2000); // should we make it less time?
                         //canvas.closeWindow();
                         //ADD GIF EVENT HERE on click on mine
-                        Image boom = new Image(x,y,"bomb.gif");
-                        canvas.add(boom);
-                        canvas.draw();;
-                    }
+                        // Image boom = new Image(x,y,"frame1.png");
+                        // canvas.add(boom);
+                        // canvas.animate(()-> boom.setImagePath("frame2.png"));
+                        // canvas.animate(()-> boom.setImagePath("frame3.png"));
+                        // canvas.animate(()-> boom.setImagePath("frame4.png"));
+                
                     break;
                 }
             }// if the click is outside..

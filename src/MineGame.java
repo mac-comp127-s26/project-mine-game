@@ -6,7 +6,7 @@ import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.FontStyle;
 import edu.macalester.graphics.GraphicsText;
 
-//import edu.macalester.graphics.Rectangle;
+// import edu.macalester.graphics.Rectangle;
 import java.util.List;
 import java.util.Random;
 
@@ -22,9 +22,7 @@ public class MineGame {
     private List<Tile> tilesArrayList = new ArrayList<>();
     private boolean hit;
     private Random rand = new Random();
-    
 
-    
 
     public MineGame() {
         this.canvas = new CanvasWindow("Mine Game!", CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -56,36 +54,44 @@ public class MineGame {
         int randomIndex = rand.nextInt(tilesArrayList.size());
         tilesArrayList.get(randomIndex).setMineup(true);
 
+         
 
         canvas.onClick(event -> {
-            //System.out.println("clicked"); // just keeping this for now that we can keep checking it
+            // System.out.println("clicked"); // just keeping this for now that we can keep checking it
             double x = event.getPosition().getX();
             double y = event.getPosition().getY();
             for (Tile t : tilesArrayList) {
                 if (t.contains(x, y)) {
                     t.reveal();
                     canvas.draw();
-                    hit= true; //created a new boolean variable up top.
-                    if(t.isMine()){
-                        canvas.pause(3000); // should we make it less time?
+                    hit = true; // created a new boolean variable up top.
+                    if (t.isMine()) {
+                        canvas.add(getText());
+                        canvas.pause(2000); // should we make it less time?
                         canvas.closeWindow();
                     }
-                    break;   
+                    break;
                 }
             }// if the click is outside..
-            //the problem is that it only works when there is no green tile
-            if (!hit){
+             // the problem is that it only works when there is no green tile
+            if (!hit) {
                 System.out.println("You Clicked Outside the tiles");
             }
         });
     }
-     
-
 
 
     public List<Tile> getTilesArrayList() {
         return tilesArrayList;
     }
+
+    public GraphicsText getText(){
+            GraphicsText loseText = new GraphicsText("YOU LOSE!!",40,100);
+                    loseText.setFontSize(90);
+                    loseText.setFillColor(Color.red);
+                    return loseText;
+
+        }
 
     public void runGame() {
     }
@@ -94,8 +100,7 @@ public class MineGame {
     public static void main(String[] args) {
 
         MineGame mg = new MineGame();
-        
-       
+        mg.getText();
 
     }
 }

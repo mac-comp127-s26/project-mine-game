@@ -72,7 +72,7 @@ public class MineGame {
                     if (t.isMine()) {
                         canvas.add(getText());
                         canvas.pause(2000); // should we make it less time?
-                        canvas.closeWindow();
+                        reset();
                     }
                     break;
                     

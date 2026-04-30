@@ -3,8 +3,8 @@ import edu.macalester.graphics.Rectangle;
 import java.awt.Color;
 //import javax.swing.Timer;
 import edu.macalester.graphics.Image;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
+
+
 
 
 public class Tile {

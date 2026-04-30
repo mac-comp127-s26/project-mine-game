@@ -57,7 +57,6 @@ public class MineGame {
 
         // int randomIndex = rand.nextInt(tilesArrayList.size());
         // tilesArrayList.get(randomIndex).setMineup(true);
-
          
 
         canvas.onClick(event -> {
@@ -70,9 +69,14 @@ public class MineGame {
                     canvas.draw();
                     hit = true; // created a new boolean variable up top.
                     if (t.isMine()) {
-                        canvas.add(getText());
+                        t.reveal();
+                        showBomb();
+                        showExplosion();
+                        canvas.draw();
                         canvas.pause(2000); // should we make it less time?
+                        canvas.add(getText());
                         reset();
+                        
                     }
                     break;
                     
@@ -84,6 +88,25 @@ public class MineGame {
             }
         });
     }
+
+    public void showBomb() {
+        Image bomb = new Image("War Wow GIF.gif");
+        bomb.setPosition(0, 0);
+        bomb.setScale(CANVAS_WIDTH / bomb.getWidth(), CANVAS_HEIGHT / bomb.getHeight()
+    );
+
+    canvas.add(bomb);
+    }
+
+    public void showExplosion() {
+        Image explosion = new Image("explosion.gif");
+        explosion.setPosition(0, 0);
+        explosion.setScale(CANVAS_WIDTH / explosion.getWidth(), CANVAS_HEIGHT / explosion.getHeight()
+    );
+
+    canvas.add(explosion);
+    }
+
 
     public void reset(){
         canvas.removeAll();

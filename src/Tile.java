@@ -13,6 +13,7 @@ public class Tile {
     private double width;
     private double height;
     private boolean mine = false;
+    private int greenCount = 0;
 
 private Rectangle tile ; //extend rectangle .. 
 
@@ -47,18 +48,18 @@ public void reveal() {
     }
     else{
     tile.setFillColor(Color.GREEN);
-    
+        greenCount++;
+            if (greenCount==6){
+                //canvas.removeAll();
+                System.out.println(" shdhfdhfhfhfhdhwon");
+        }
+        
     }
     
 }
 
 
 public boolean contains(double x, double y){
-       // return tile.getBounds().contains(x,y);
-
-       //same logic here..check if it the click is inside the tiles..
-       //did not work
-       // tiles turn green though yay!
         return x>=this.x &&
         x<this.x+this.width &&
         y >=this.y &&

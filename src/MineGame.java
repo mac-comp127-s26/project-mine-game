@@ -23,7 +23,7 @@ public class MineGame {
     private List<Tile> tilesArrayList = new ArrayList<>();
     private boolean hit;
     private Random rand = new Random();
-    private boolean redTile = false ;
+   
 
 
     public MineGame() {
@@ -129,7 +129,7 @@ public class MineGame {
 
     public void runGame() {
     }
-public void Grid(){
+    public void Grid(){
     line = new Line(125, 0, 20, 400); // first vertical line
         line.addToCanvas(canvas);
 

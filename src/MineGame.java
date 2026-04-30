@@ -70,6 +70,7 @@ public class MineGame {
                     hit = true; // created a new boolean variable up top.
                     if (t.isMine()) {
                         t.reveal();
+                        canvas.removeAll();
                         showBomb();
                         showExplosion();
                         canvas.draw();
@@ -90,8 +91,8 @@ public class MineGame {
     }
 
     public void showBomb() {
-        Image bomb = new Image("War Wow GIF.gif");
-        bomb.setPosition(0, 0);
+        Image bomb = new Image("bomb.png");
+        bomb.setPosition(80, 150);
         bomb.setScale(CANVAS_WIDTH / bomb.getWidth(), CANVAS_HEIGHT / bomb.getHeight()
     );
 
@@ -99,8 +100,8 @@ public class MineGame {
     }
 
     public void showExplosion() {
-        Image explosion = new Image("explosion.gif");
-        explosion.setPosition(0, 0);
+        Image explosion = new Image("explosion.png");
+        explosion.setPosition(-250, -100);
         explosion.setScale(CANVAS_WIDTH / explosion.getWidth(), CANVAS_HEIGHT / explosion.getHeight()
     );
 

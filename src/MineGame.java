@@ -92,7 +92,7 @@ public class MineGame {
 
     public void showBomb() {
         Image bomb = new Image("bomb.png");
-        bomb.setPosition(80, 150);
+        bomb.setPosition(-70, 30);
         bomb.setScale(CANVAS_WIDTH / bomb.getWidth(), CANVAS_HEIGHT / bomb.getHeight()
     );
 

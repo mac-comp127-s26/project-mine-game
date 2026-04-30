@@ -74,10 +74,10 @@ public class MineGame {
                         showBomb();
                         showExplosion();
                         canvas.draw();
-                        canvas.pause(2000); // should we make it less time?
+                        canvas.pause(2500); // should we make it less time?
                         canvas.add(getText());
                         reset();
-                        
+    
                     }
                     break;
                     

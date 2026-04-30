@@ -33,31 +33,6 @@ public class MineGame {
 
         Grid();
 
-        // line = new Line(125, 0, 20, 400); // first vertical line
-        // line.addToCanvas(canvas);
-
-        // line = new Line(0, 125, 400, 20); // first horizontal line
-        // line.addToCanvas(canvas);
-
-        // line = new Line(250, 0, 20, 400); // second vertical line
-        // line.addToCanvas(canvas);
-
-        // line = new Line(0, 250, 400, 20); // second horizontal line or bottom
-        // line.addToCanvas(canvas);
-
-        // for (int row = 0; row < 3; row++) {
-        //     for (int col = 0; col < 3; col++) {
-        //         int x = col * tile_space_size + spacing;
-        //         int y = row * tile_space_size + spacing;
-        //         Tile tile = new Tile(x, y, tileSize, tileSize);
-        //         tilesArrayList.add(tile);
-        //         tile.addToCanvas(canvas);
-        //     }
-        // }
-
-        // int randomIndex = rand.nextInt(tilesArrayList.size());
-        // tilesArrayList.get(randomIndex).setMineup(true);
-         
 
         canvas.onClick(event -> {
             System.out.println(tilesArrayList); // just keeping this for now that we can keep checking it
@@ -158,7 +133,6 @@ public class MineGame {
     public static void main(String[] args) {
 
         MineGame mg = new MineGame();
-        mg.getText();
 
     }
 }

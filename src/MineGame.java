@@ -23,8 +23,7 @@ public class MineGame {
     private List<Tile> tilesArrayList = new ArrayList<>();
     private boolean hit;
     private Random rand = new Random();
-    private int greenCount=0;
-   
+    private int greenCount = 0;
 
 
     public MineGame() {
@@ -36,7 +35,7 @@ public class MineGame {
 
 
         canvas.onClick(event -> {
-            //System.out.println(tilesArrayList); // just keeping this for now that we can keep checking it
+            System.out.println(greenCount); // just keeping this for now that we can keep checking it
             double x = event.getPosition().getX();
             double y = event.getPosition().getY();
             for (Tile t : tilesArrayList) {
@@ -50,24 +49,24 @@ public class MineGame {
                         showBomb();
                         showExplosion();
                         canvas.draw();
-                        canvas.pause(2500); // should we make it less time?
-                        canvas.add(getText());
+                        canvas.pause(2000); // should we make it less time?
+                        greenCount = 0;
                         reset();
-    
-                    }else{
-                        greenCount++;
-                        if (greenCount==6){
-                            System.out.println("Yooooou"); // works but only for the first game
 
-                            //canvas.removeAll();// -not working right 
-                            //showCongrats();
-                            //canvas.draw();
-                            //canvas.pause(2500);
-                            //reset();
+                    } else {
+                        greenCount++;
+                        if (greenCount == 6) {
+                            System.out.println("Yooooou"); // works but only for the first game
+                            canvas.removeAll();// -not working right
+                            showCongrats();
+                            canvas.draw();
+                            canvas.pause(2500);
+                            greenCount = 0;
+                            reset();
                         }
                     }
                     break;
-                    
+
                 }
             }// if the click is outside..
              // the problem is that it only works when there is no green tile
@@ -80,30 +79,29 @@ public class MineGame {
     public void showBomb() {
         Image bomb = new Image("bomb.png");
         bomb.setPosition(-70, 30);
-        bomb.setScale(CANVAS_WIDTH / bomb.getWidth(), CANVAS_HEIGHT / bomb.getHeight()
-    );
+        bomb.setScale(CANVAS_WIDTH / bomb.getWidth(), CANVAS_HEIGHT / bomb.getHeight());
 
-    canvas.add(bomb);
+        canvas.add(bomb);
     }
 
     public void showExplosion() {
         Image explosion = new Image("explosion.png");
         explosion.setPosition(-250, -100);
-        explosion.setScale(CANVAS_WIDTH / explosion.getWidth(), CANVAS_HEIGHT / explosion.getHeight()
-    );
+        explosion.setScale(CANVAS_WIDTH / explosion.getWidth(), CANVAS_HEIGHT / explosion.getHeight());
 
-    canvas.add(explosion);
+        canvas.add(explosion);
     }
-    public void showCongrats(){ 
+
+    public void showCongrats() {
         Image congrats = new Image("congrats.png");
-        congrats.setPosition(400,400);
-        congrats.setScale(CANVAS_WIDTH/congrats.getImageHeight(), CANVAS_HEIGHT/congrats.getImageHeight()
+        congrats.setPosition(400, 400);
+        congrats.setScale(CANVAS_WIDTH / congrats.getImageHeight(), CANVAS_HEIGHT / congrats.getImageHeight()
 
-    );
-    canvas.add(congrats);
+        );
+        canvas.add(congrats);
     }
 
-    public void reset(){
+    public void reset() {
         canvas.removeAll();
         tilesArrayList.clear();
         Grid();
@@ -113,18 +111,12 @@ public class MineGame {
         return tilesArrayList;
     }
 
-    public GraphicsText getText(){
-            GraphicsText loseText = new GraphicsText("YOU LOSE!!",40,100);
-                    loseText.setFontSize(90);
-                    loseText.setFillColor(Color.red);
-                    return loseText;
-
-        }
 
     public void runGame() {
     }
-    public void Grid(){
-    line = new Line(125, 0, 20, 400); // first vertical line
+
+    public void Grid() {
+        line = new Line(125, 0, 20, 400); // first vertical line
         line.addToCanvas(canvas);
 
         line = new Line(0, 125, 400, 20); // first horizontal line
@@ -147,7 +139,7 @@ public class MineGame {
         }
         int randomIndex = rand.nextInt(tilesArrayList.size());
         tilesArrayList.get(randomIndex).setMineup(true);
-}
+    }
 
     public static void main(String[] args) {
 

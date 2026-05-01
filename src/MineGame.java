@@ -94,10 +94,23 @@ public class MineGame {
 
     public void showCongrats() {
         Image congrats = new Image("congrats.png");
-        congrats.setPosition(400, 400);
-        congrats.setScale(CANVAS_WIDTH / congrats.getImageHeight(), CANVAS_HEIGHT / congrats.getImageHeight()
+        
+        double scale = Math.max(CANVAS_WIDTH / congrats.getWidth(), CANVAS_HEIGHT / congrats.getHeight()
 
         );
+        congrats.setScale(scale,scale);
+
+        double scaledWidth = congrats.getWidth()*scale;
+        double scaledheight = congrats.getHeight()*scale;
+
+        double x = (CANVAS_WIDTH- scaledWidth)-100;
+        double y = (CANVAS_WIDTH- scaledheight)-110;
+
+        congrats.setPosition(x,y);
+
+
+        
+
         canvas.add(congrats);
     }
 

@@ -13,7 +13,7 @@ public class Tile {
     private double width;
     private double height;
     private boolean mine = false;
-    private int greenCount = 0;
+    //private int greenCount = 0;
 
 private Rectangle tile ; //extend rectangle .. 
 
@@ -48,12 +48,7 @@ public void reveal() {
     }
     else{
     tile.setFillColor(Color.GREEN);
-        greenCount++;
-            if (greenCount==6){
-                //canvas.removeAll();
-                System.out.println(" shdhfdhfhfhfhdhwon");
-        }
-        
+
     }
     
 }

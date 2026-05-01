@@ -23,6 +23,7 @@ public class MineGame {
     private List<Tile> tilesArrayList = new ArrayList<>();
     private boolean hit;
     private Random rand = new Random();
+    private int greenCount=0;
    
 
 
@@ -35,7 +36,7 @@ public class MineGame {
 
 
         canvas.onClick(event -> {
-            System.out.println(tilesArrayList); // just keeping this for now that we can keep checking it
+            //System.out.println(tilesArrayList); // just keeping this for now that we can keep checking it
             double x = event.getPosition().getX();
             double y = event.getPosition().getY();
             for (Tile t : tilesArrayList) {
@@ -53,6 +54,17 @@ public class MineGame {
                         canvas.add(getText());
                         reset();
     
+                    }else{
+                        greenCount++;
+                        if (greenCount==6){
+                            System.out.println("Yooooou"); // works but only for the first game
+
+                            //canvas.removeAll();// -not working right 
+                            //showCongrats();
+                            //canvas.draw();
+                            //canvas.pause(2500);
+                            //reset();
+                        }
                     }
                     break;
                     
@@ -82,7 +94,14 @@ public class MineGame {
 
     canvas.add(explosion);
     }
+    public void showCongrats(){ 
+        Image congrats = new Image("congrats.png");
+        congrats.setPosition(400,400);
+        congrats.setScale(CANVAS_WIDTH/congrats.getImageHeight(), CANVAS_HEIGHT/congrats.getImageHeight()
 
+    );
+    canvas.add(congrats);
+    }
 
     public void reset(){
         canvas.removeAll();

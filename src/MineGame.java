@@ -56,7 +56,7 @@ public class MineGame {
                     } else {
                         greenCount++;
                         if (greenCount == 6) {
-                            System.out.println("Yooooou"); // works but only for the first game
+                            System.out.println("Yooooou Win"); // works but only for the first game
                             canvas.removeAll();// -not working right
                             showCongrats();
                             canvas.draw();
@@ -78,8 +78,10 @@ public class MineGame {
 
     public void showBomb() {
         Image bomb = new Image("bomb.png");
-        bomb.setPosition(-70, 30);
-        bomb.setScale(CANVAS_WIDTH / bomb.getWidth(), CANVAS_HEIGHT / bomb.getHeight());
+        double x = (CANVAS_WIDTH - bomb.getWidth()) / 2;
+        double y = (CANVAS_HEIGHT - bomb.getHeight()) / 2;
+
+        bomb.setPosition(x, y);
 
         canvas.add(bomb);
     }
@@ -94,22 +96,10 @@ public class MineGame {
 
     public void showCongrats() {
         Image congrats = new Image("congrats.png");
-        
-        double scale = Math.max(CANVAS_WIDTH / congrats.getWidth(), CANVAS_HEIGHT / congrats.getHeight()
+        double x = (CANVAS_WIDTH - congrats.getWidth()) / 2;
+        double y = (CANVAS_HEIGHT - congrats.getHeight()) / 2;
 
-        );
-        congrats.setScale(scale,scale);
-
-        double scaledWidth = congrats.getWidth()*scale;
-        double scaledheight = congrats.getHeight()*scale;
-
-        double x = (CANVAS_WIDTH- scaledWidth)-100;
-        double y = (CANVAS_WIDTH- scaledheight)-110;
-
-        congrats.setPosition(x,y);
-
-
-        
+        congrats.setPosition(x, y);
 
         canvas.add(congrats);
     }

@@ -17,8 +17,8 @@ public class MineGame {
     private final int CANVAS_WIDTH = 500;
     private final int CANVAS_HEIGHT = 500;
     private Line line;
-    private int tileSize = 90;// actual tile size
-    private int tile_space_size = 132; // adjusts how far spaced between based on the number it gets used in spacing
+    private int tileSize = 110;// actual tile size
+    private int tile_space_size = 160; // adjusts how far spaced between based on the number it gets used in spacing
     private int spacing = (tile_space_size - tileSize) / 2;// spacing in between squares
     private List<Tile> tilesArrayList = new ArrayList<>();
     private boolean hit;
@@ -60,7 +60,7 @@ public class MineGame {
                             canvas.removeAll();// -not working right
                             showCongrats();
                             canvas.draw();
-                            canvas.pause(2500);
+                            canvas.pause(2000);
                             greenCount = 0;
                             reset();
                         }

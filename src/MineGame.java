@@ -71,7 +71,7 @@ public class MineGame {
             }// if the click is outside..
              // the problem is that it only works when there is no green tile
             if (!hit) {
-                System.out.println("You Clicked Outside the tiles");
+                System.out.println("You clicked outside the tiles");
             }
         });
     }

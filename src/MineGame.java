@@ -3,11 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import edu.macalester.graphics.CanvasWindow;
-import edu.macalester.graphics.FontStyle;
-import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
-
-// import edu.macalester.graphics.Rectangle;
 import java.util.List;
 import java.util.Random;
 
@@ -56,8 +52,7 @@ public class MineGame {
                     } else {
                         greenCount++;
                         if (greenCount == 6) {
-                            System.out.println("Yooooou Win"); // works but only for the first game
-                            canvas.removeAll();// -not working right
+                            canvas.removeAll();
                             showCongrats();
                             canvas.draw();
                             canvas.pause(2000);
@@ -68,10 +63,6 @@ public class MineGame {
                     break;
 
                 }
-            }// if the click is outside..
-             // the problem is that it only works when there is no green tile
-            if (!hit) {
-                System.out.println("You clicked outside the tiles");
             }
         });
     }

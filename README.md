@@ -73,7 +73,7 @@ The following resources were referenced during development:
 
 # Presentation Video 
 
-![](MineGameVideoCompressed.mp4)
+See MineGameVideoCompressed.mp4
 
 # Presentation Slides
 

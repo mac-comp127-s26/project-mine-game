@@ -78,7 +78,7 @@ See MineGameVideoCompressed.mp4
 
 # Presentation Slides
 
-![](Mine Game Presentation.pdf)
+![](MineGameSlides.pdf)
 
 
 

@@ -73,13 +73,12 @@ The following resources were referenced during development:
 
 # Presentation Video 
 
+
 See MineGameVideoCompressed.mp4
 
 # Presentation Slides
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRR6aW9rNzhVfmwEJgzW4j3uvLq9ivoDvYitZa7dxe3sZ2jSH2jtFnwnM5Eo3bvlxU_s1aYCN34kICd/pubembed?start=true&loop=true&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-
+![](Mine Game Presentation.pdf)
 
 
 

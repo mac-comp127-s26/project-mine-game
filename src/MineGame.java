@@ -136,7 +136,7 @@ public class MineGame {
 
     public static void main(String[] args) {
 
-        MineGame mg = new MineGame();
+        MineGame mg = new MineGame(); 
 
     }
 }

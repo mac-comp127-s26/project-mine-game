@@ -17,12 +17,12 @@ public class Tile {
 
 private Rectangle tile ; //extend rectangle .. 
 
-public Tile(double x, double  y, double width, double height) { // sets intial Tile with fill color, X,Y Corsds
+public Tile(double x, double  y, double width, double height) { 
    this.x=x;
    this.y=y;
    this.width=width;
    this.height=height;
-    tile = new Rectangle(x, y, width, height); // new square
+    tile = new Rectangle(x, y, width, height); 
     tile.setFillColor(Color.PINK);
 }
 
@@ -44,7 +44,6 @@ public boolean isMine(){
 public void reveal() {
     if (mine) {
         tile.setFillColor(Color.RED);
-        //System.out.println("You stepped on the mine");
     }
     else{
     tile.setFillColor(Color.GREEN);

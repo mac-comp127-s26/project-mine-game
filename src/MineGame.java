@@ -13,9 +13,9 @@ public class MineGame {
     private final int CANVAS_WIDTH = 500;
     private final int CANVAS_HEIGHT = 500;
     private Line line;
-    private int tileSize = 110;// actual tile size
-    private int tile_space_size = 160; // adjusts how far spaced between based on the number it gets used in spacing
-    private int spacing = (tile_space_size - tileSize) / 2;// spacing in between squares
+    private int tileSize = 110;
+    private int tile_space_size = 160;
+    private int spacing = (tile_space_size - tileSize) / 2;
     private List<Tile> tilesArrayList = new ArrayList<>();
     private boolean hit;
     private Random rand = new Random();
@@ -24,28 +24,27 @@ public class MineGame {
 
     public MineGame() {
         this.canvas = new CanvasWindow("Mine Game!", CANVAS_WIDTH, CANVAS_HEIGHT);
-        canvas.setBackground(Color.black); // sets background color
+        canvas.setBackground(Color.black);
 
 
         Grid();
 
 
         canvas.onClick(event -> {
-            System.out.println(greenCount); // just keeping this for now that we can keep checking it
             double x = event.getPosition().getX();
             double y = event.getPosition().getY();
             for (Tile t : tilesArrayList) {
                 if (t.contains(x, y)) {
                     t.reveal();
                     canvas.draw();
-                    hit = true; // created a new boolean variable up top.
+                    hit = true; 
                     if (t.isMine()) {
                         t.reveal();
                         canvas.removeAll();
                         showBomb();
                         showExplosion();
                         canvas.draw();
-                        canvas.pause(2000); // should we make it less time?
+                        canvas.pause(2000);
                         greenCount = 0;
                         reset();
 
@@ -110,16 +109,16 @@ public class MineGame {
     }
 
     public void Grid() {
-        line = new Line(125, 0, 20, 400); // first vertical line
+        line = new Line(125, 0, 20, 400); 
         line.addToCanvas(canvas);
 
-        line = new Line(0, 125, 400, 20); // first horizontal line
+        line = new Line(0, 125, 400, 20); 
         line.addToCanvas(canvas);
 
-        line = new Line(250, 0, 20, 400); // second vertical line
+        line = new Line(250, 0, 20, 400); 
         line.addToCanvas(canvas);
 
-        line = new Line(0, 250, 400, 20); // second horizontal line or bottom
+        line = new Line(0, 250, 400, 20); 
         line.addToCanvas(canvas);
 
         for (int row = 0; row < 3; row++) {

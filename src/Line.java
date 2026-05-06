@@ -7,8 +7,8 @@ public class Line {
 
 private Rectangle line;
 
-public Line(int x, int y, int width, int height) { // sets intial rectangle with fill color, generic framework
-    line = new Rectangle(x, y, width, height); // new rectangel
+public Line(int x, int y, int width, int height) { 
+    line = new Rectangle(x, y, width, height); 
         line.setFillColor(Color.BLACK);
 }
 

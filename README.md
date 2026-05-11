@@ -73,7 +73,7 @@ The following resources were referenced during development:
 
 # Presentation Video 
 
-[![Watch the video](video-preview.png)](MineGameVideoCompressed.mp4)
+[![MineGameVideo](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fyoutu.be%2F9Szzus8LHfs)](https://youtu.be/9Szzus8LHfs)
 
 # Presentation Slides
 

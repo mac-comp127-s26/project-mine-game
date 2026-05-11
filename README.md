@@ -77,7 +77,7 @@ The following resources were referenced during development:
 
 # Presentation Slides
 
-![Presentation Slides](slides-preview.png)](MineGameSlides.pdf)
+[![Presentation Slides](slides-preview.png)](MineGameSlides.pdf)
 
 
 
